@@ -34,4 +34,4 @@ export EDITOR="$VISUAL"
 export MANPAGER='nvim +Man!'
 
 # Set the keybindings to vi mode.
-#set -o vi
+set -o vi
