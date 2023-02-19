@@ -1,0 +1,8 @@
+[core]
+	editor = nvim
+[user]
+	email = ririmello.a@gmail.com
+	name = Auri Gabriel
+[init]
+	defaultBranch = main
+[credential]
