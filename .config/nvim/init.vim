@@ -46,6 +46,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
 "Plug 'nvim-tree/nvim-tree.lua'
 
+" fuzzy finder
+Plug 'airblade/vim-rooter'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " git integrations
 Plug 'tpope/vim-fugitive'
 
