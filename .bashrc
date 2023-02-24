@@ -35,3 +35,6 @@ export MANPAGER='nvim +Man!'
 
 # Set the keybindings to vi mode.
 set -o vi
+
+# Init Startship.rs
+eval "$(starship init bash)"
