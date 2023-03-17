@@ -66,8 +66,19 @@ Plug 'vimpostor/vim-lumen'
 " discord rich presence
 Plug 'andweeb/presence.nvim'
 
+" vimwiki
+Plug 'vimwiki/vimwiki'
 call plug#end()
-let g:ale_completion_enabled = 1
+
+" vimwiki requisites
+set nocompatible
+filetype plugin on
+syntax on
+
+" vimwiki config
+let g:vimwiki_list = [{'syntax': 'markdown','ext':'.md'}]
+
+let g:ale_completion_enabled = 0
 
 set background=dark " or light if you want light mode
 colorscheme gruvbox
