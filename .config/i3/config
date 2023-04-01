@@ -182,6 +182,9 @@ bindsym $mod+r mode "resize"
 # THEME
 font pango:FiraCode Nerd Font 11
 
+# wallpaper
+exec_always feh --bg-scale $HOME/.config/i3/wallpapers/finalizer.png 
+
 # set primary gruvbox colorscheme colors
 set $bg #282828
 set $red #cc241d
