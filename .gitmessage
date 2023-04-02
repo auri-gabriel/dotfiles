@@ -17,5 +17,5 @@
 #   - Use "Fixes #123" or "Closes #123" to automatically close the issue when the commit is merged
 
 # <Footer (optional)>
-#   - Breaking changes: Describe any breaking changes introduced by the commit
+#   - BREAKING CHANGES: Describe any breaking changes introduced by the commit
 #   - Related issues: Mention any related issues or pull requests
