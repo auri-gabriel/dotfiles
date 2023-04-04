@@ -38,4 +38,9 @@ data.location=$HOME/.task
 #include solarized-dark-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
-
+taskd.certificate=$HOME/.inthe.am/certificates/private.certificate.pem
+taskd.key=$HOME/.inthe.am/certificates/private.key.pem
+taskd.ca=$HOME/.inthe.am/certificates/ca.cert.pem
+taskd.server=
+taskd.credentials=
+taskd.trust=strict
