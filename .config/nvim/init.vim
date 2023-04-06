@@ -60,6 +60,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'folke/tokyonight.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
 
+" Emmet for vim
+Plug 'mattn/emmet-vim'
+
 " follow system colourscheme
 Plug 'vimpostor/vim-lumen'
 
@@ -84,6 +87,10 @@ set background=dark " or light if you want light mode
 colorscheme gruvbox
 "colorscheme tokyonight-night
 
+" emmet config
+let g:user_emmet_leader_key=','
+
+" ale config
 let g:ale_linters = {'rust': ['analyzer']}
 
   let g:lightline = {
