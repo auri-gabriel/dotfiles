@@ -58,6 +58,7 @@ Plug 'junegunn/fzf.vim'
 
 " git integrations
 Plug 'tpope/vim-fugitive'
+Plug 'lewis6991/gitsigns.nvim'
 
 " colour theme
 Plug 'folke/tokyonight.nvim'
