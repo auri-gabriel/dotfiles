@@ -128,7 +128,11 @@ let g:ale_completion_enabled = 0
 
 set background=dark " or light if you want light mode
 colorscheme gruvbox
-"colorscheme tokyonight-night
+
+" Spell-check Markdown files and Git Commit Messages
+"autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+
 
 " emmet config
 let g:user_emmet_leader_key=','
