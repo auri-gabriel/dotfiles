@@ -83,6 +83,9 @@ Plug 'vimwiki/vimwiki'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
+" vim table mode
+Plug 'dhruvasagar/vim-table-mode'
+
 call plug#end()
 
 " goyo config
