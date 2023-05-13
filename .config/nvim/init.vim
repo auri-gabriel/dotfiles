@@ -86,6 +86,9 @@ Plug 'junegunn/limelight.vim'
 " vim table mode
 Plug 'dhruvasagar/vim-table-mode'
 
+" github copilot
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 " goyo config
