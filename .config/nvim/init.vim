@@ -18,3 +18,4 @@ source ~/.config/nvim/goyo.vim
 source ~/.config/nvim/lightline.vim
 "source ~/.config/nvim/tree.vim
 source ~/.config/nvim/vimwiki.vim
+source ~/.config/nvim/undotree.vim

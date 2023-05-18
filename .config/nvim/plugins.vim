@@ -54,7 +54,7 @@ Plug 'dhruvasagar/vim-table-mode'
 " github copilot
 Plug 'github/copilot.vim'
 
-" commentary
-Plug 'tpope/vim-commentary'
+" undo tree
+Plug 'mbbill/undotree'
 
 call plug#end()
