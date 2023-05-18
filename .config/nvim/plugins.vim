@@ -57,4 +57,7 @@ Plug 'github/copilot.vim'
 " undo tree
 Plug 'mbbill/undotree'
 
+" vim-commentary
+Plug 'tpope/vim-commentary'
+
 call plug#end()
