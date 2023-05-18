@@ -9,3 +9,6 @@ let g:lightline = {
     \   'gitbranch': 'FugitiveHead'
 	\ },
 	\ }
+
+" Use autocmd to force lightline update.
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()

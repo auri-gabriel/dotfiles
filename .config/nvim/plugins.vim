@@ -54,4 +54,7 @@ Plug 'dhruvasagar/vim-table-mode'
 " github copilot
 Plug 'github/copilot.vim'
 
+" commentary
+Plug 'tpope/vim-commentary'
+
 call plug#end()
