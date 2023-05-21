@@ -60,4 +60,7 @@ Plug 'mbbill/undotree'
 " vim-commentary
 Plug 'tpope/vim-commentary'
 
+" nvim-colorizer
+Plug 'norcalli/nvim-colorizer.lua'
+
 call plug#end()
