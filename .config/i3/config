@@ -152,6 +152,11 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+
+# configure the bind for the screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -207,6 +212,12 @@ client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 client.urgent           $red $red $white $red $red
 client.placeholder      $darkgray $darkgray $white $darkgray $darkgray
 
+set $smart_borders off
+
+default_border none
+default_floating_border pixel 1
+
+
 # blue gruvbox
 # class                 border|backgr|text|indicator|child_border
 #client.focused          $blue $blue $darkgray $purple $darkgray
@@ -250,3 +261,4 @@ client.background       $bg
 #  }
 #}
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id redshift -c ~/.config/redshift.conf
