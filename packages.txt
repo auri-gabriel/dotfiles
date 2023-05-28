@@ -1,0 +1,10 @@
+i3
+rofi
+polybar
+redshift
+light
+nvim
+nodejs
+fzf
+ripgrep
+pandoc
