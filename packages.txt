@@ -8,3 +8,4 @@ nodejs
 fzf
 ripgrep
 pandoc
+zathura
