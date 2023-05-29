@@ -1,0 +1,51 @@
+*
+!.gitignore
+!.Xmodmap
+!.bashrc
+!.config/alacritty/
+!.config/fish/
+!.config/fish/
+!.config/i3/
+!.config/nvim/
+!.config/polybar/
+!.config/starship.toml
+!.config/zathura/
+!.fonts/Fira Code Bold Nerd Font Complete Mono.ttf
+!.fonts/Fira Code Bold Nerd Font Complete.ttf
+!.fonts/Fira Code Light Nerd Font Complete Mono.ttf
+!.fonts/Fira Code Light Nerd Font Complete.ttf
+!.fonts/Fira Code Medium Nerd Font Complete Mono.ttf
+!.fonts/Fira Code Medium Nerd Font Complete.ttf
+!.fonts/Fira Code Regular Nerd Font Complete Mono.ttf
+!.fonts/Fira Code Regular Nerd Font Complete.ttf
+!.fonts/Fira Code Retina Nerd Font Complete Mono.ttf
+!.fonts/Fira Code Retina Nerd Font Complete.ttf
+!.fonts/Fira Code SemiBold Nerd Font Complete Mono.ttf
+!.fonts/Fira Code SemiBold Nerd Font Complete.ttf
+!.fonts/Inter-Black.otf
+!.fonts/Inter-BlackItalic.otf
+!.fonts/Inter-Bold.otf
+!.fonts/Inter-BoldItalic.otf
+!.fonts/Inter-ExtraBold.otf
+!.fonts/Inter-ExtraBoldItalic.otf
+!.fonts/Inter-ExtraLight.otf
+!.fonts/Inter-ExtraLightItalic.otf
+!.fonts/Inter-Italic.otf
+!.fonts/Inter-Light.otf
+!.fonts/Inter-LightItalic.otf
+!.fonts/Inter-Medium.otf
+!.fonts/Inter-MediumItalic.otf
+!.fonts/Inter-Regular.otf
+!.fonts/Inter-SemiBold.otf
+!.fonts/Inter-SemiBoldItalic.otf
+!.fonts/Inter-Thin.otf
+!.fonts/Inter-ThinItalic.otf
+!.fonts/Inter-V.ttf
+!.fonts/NotoColorEmoji-Regular.ttf
+!.gitconfig
+!.gitmessage
+!.inputrc
+!.taskrc
+!.tmux.conf
+!install.sh
+!packages.txt
