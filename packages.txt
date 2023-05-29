@@ -4,11 +4,11 @@ rofi
 polybar
 redshift
 light
-nvim
-nodejs
+neovim
 fzf
 ripgrep
 fish
 tmux
 pandoc
 zathura
+alacritty
