@@ -13,11 +13,11 @@ noremap <F5> :set list!<CR>
 inoremap <F5> <C-o>:set list!<CR>
 cnoremap <F5> <C-c>:set list!<CR>
 
-" Reset the space key
-noremap <Space> <Nop>
-" Map space to the leader key
-map <Space> <Leader>
-let g:mapleader = " "
+" " Reset the space key
+" noremap <Space> <Nop>
+" " Map space to the leader key
+" map <Space> <Leader>
+" let g:mapleader = " "
 
 " Map leader + y to copy to clipboard
 nnoremap <leader>y "+y
