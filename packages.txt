@@ -1,3 +1,4 @@
+git-core
 i3
 feh
 rofi
