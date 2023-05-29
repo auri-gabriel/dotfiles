@@ -8,5 +8,7 @@ nvim
 nodejs
 fzf
 ripgrep
+fish
+tmux
 pandoc
 zathura
