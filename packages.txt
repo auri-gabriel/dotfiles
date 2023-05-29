@@ -7,8 +7,10 @@ light
 neovim
 fzf
 ripgrep
+the_silver_searcher
 fish
 tmux
 pandoc
 zathura
 alacritty
+texlive-scheme-full
