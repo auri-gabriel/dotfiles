@@ -17,3 +17,4 @@ alacritty
 texlive-scheme-full
 task
 timew
+pass
