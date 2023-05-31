@@ -13,6 +13,7 @@ fish
 tmux
 pandoc
 zathura
+zathura-plugins-all
 alacritty
 texlive-scheme-full
 task
