@@ -10,6 +10,7 @@ if [ ! -x "$(command -v node)" ]; then
     export PATH="/usr/local/bin/:$PATH"
     # Or use package manager, e.g.
     # sudo apt-get install nodejs
+fi
     
 # Use package feature to install coc.nvim
 
@@ -32,6 +33,13 @@ fi
 # Change extension names to the extensions you need
 npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-rust-analyzer
-npm install coc-json
+npm isntall coc-sh
+# web dev
 npm install coc-html
 npm install coc-css 
+npm install coc-tsserver
+npm install coc-json
+# php
+npm install coc-phpls
+npm install coc-blade
+
