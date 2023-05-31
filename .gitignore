@@ -5,12 +5,19 @@
 !.muttrc
 !.config/alacritty/
 !.config/fish/
-!.config/fish/
 !.config/i3/
 !.config/nvim/
 !.config/polybar/
 !.config/starship.toml
 !.config/zathura/
+!.config/xorg.conf.d/
+!.gitconfig
+!.gitmessage
+!.inputrc
+!.taskrc
+!.tmux.conf
+!install.sh
+!packages.txt
 !.fonts/Fira Code Bold Nerd Font Complete Mono.ttf
 !.fonts/Fira Code Bold Nerd Font Complete.ttf
 !.fonts/Fira Code Light Nerd Font Complete Mono.ttf
@@ -43,10 +50,3 @@
 !.fonts/Inter-ThinItalic.otf
 !.fonts/Inter-V.ttf
 !.fonts/NotoColorEmoji-Regular.ttf
-!.gitconfig
-!.gitmessage
-!.inputrc
-!.taskrc
-!.tmux.conf
-!install.sh
-!packages.txt

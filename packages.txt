@@ -18,3 +18,4 @@ texlive-scheme-full
 task
 timew
 pass
+libinput
