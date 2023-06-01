@@ -63,6 +63,15 @@ Plug 'tpope/vim-commentary'
 " nvim-colorizer
 Plug 'norcalli/nvim-colorizer.lua'
 
+"Outputs directly in the editor
 Plug 'metakirby5/codi.vim'
+
+"Javescript
+Plug 'pangloss/vim-javascript'
+
+" React
+Plug 'MaxMEllon/vim-jsx-pretty'
+
+Plug 'LunarWatcher/auto-pairs'
 
 call plug#end()
