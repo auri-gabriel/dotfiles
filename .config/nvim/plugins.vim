@@ -63,4 +63,6 @@ Plug 'tpope/vim-commentary'
 " nvim-colorizer
 Plug 'norcalli/nvim-colorizer.lua'
 
+Plug 'metakirby5/codi.vim'
+
 call plug#end()
