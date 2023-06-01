@@ -11,7 +11,7 @@ if [ ! -x "$(command -v node)" ]; then
     # Or use package manager, e.g.
     # sudo apt-get install nodejs
 fi
-    
+
 # Use package feature to install coc.nvim
 
 # for vim8
@@ -32,14 +32,17 @@ then
 fi
 # Change extension names to the extensions you need
 npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-rust-analyzer
-npm isntall coc-sh
+npm install coc-rust-analyzer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm isntall coc-sh --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 # web dev
-npm install coc-html
-npm install coc-css 
-npm install coc-tsserver
-npm install coc-json
+npm install coc-html --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-css --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-tsserver --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-eslint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-tslint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-tslint-plugin --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-json --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 # php
-npm install coc-phpls
-npm install coc-blade
+npm install coc-phpls --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-blade --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
