@@ -2,6 +2,7 @@
 !.gitignore
 !.Xmodmap
 !.bashrc
+!.bashrc.d
 !.muttrc
 !.config/alacritty/
 !.config/fish/
