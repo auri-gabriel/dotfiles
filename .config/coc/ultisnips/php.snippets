@@ -1,0 +1,81 @@
+# A valid snippet should starts with:
+#
+#     snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#     endsnippet
+#
+# Snippet options:
+#
+#     b - Beginning of line.
+#     i - In-word expansion.
+#     w - Word boundary.
+#     r - Regular expression
+#     e - Custom context snippet
+#     A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#     snippet emitter "emitter properties" b
+#     private readonly ${1} = new Emitter<$2>()
+#     public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#     endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet filec "File-Level Comments" b
+	/**
+	 * File: ${1:`!v expand('%:t')`}
+	 * Author: ${2:Author Name}
+	 *
+	 * Description: ${3:Brief description of the file's purpose}
+	 *
+	 * Date: ${4:`!v strftime("%Y-%m-%d")`}
+	 *
+	 * @package ${5:Package Name}
+	 * @version ${6:Version}
+	 * @link ${7:URL}
+	 * @see ${8:Related Class/Method}
+	 * @since ${9:Version}
+	 * @deprecated ${10:Version} ${11:Deprecation reason}
+	 */
+endsnippet
+
+snippet func "Function/Method Comments (PHPDoc style)" b
+	/**
+	 * ${1:Brief description of the function/method}
+	 *
+	 * @param ${2:[Parameter Type]} ${3:param1} ${4:[Description of the parameter]}
+	 * @param ${5:[Parameter Type]} ${6:param2} ${7:[Description of the parameter]}
+	 * @return ${8:[Return Type]} ${9:[Description of the return value]}
+	 * @throws ${10:[Exception Type]} ${11:[Description of the exception]}
+	 * @deprecated ${12:Version} ${13:Deprecation reason}
+	 * @see ${14:Related Class/Method}
+	 * @since ${15:Version}
+	 */
+endsnippet
+
+snippet classc "Class Comments (PHPDoc style)" b
+	/**
+	 * ${1:Brief description of the class}
+	 *
+	 * ${2:Detailed description of the class, its purpose, and functionality}
+	 *
+	 * @package ${3:Package Name}
+	 * @subpackage ${4:Subpackage Name}
+	 * @category ${5:Category}
+	 * @author ${6:Author Name}
+	 * @version ${7:Version}
+	 * @link ${8:URL}
+	 * @see ${9:Related Class/Method}
+	 * @since ${10:Version}
+	 * @deprecated ${11:Version} ${12:Deprecation reason}
+	 */
+endsnippet
+
+snippet sectionc "Section Comments" b
+	// === ${1:Section Name} ===
+	// ${2:Description of the section}
+endsnippet
+
