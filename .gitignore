@@ -12,6 +12,7 @@
 !.config/starship.toml
 !.config/zathura/
 !.config/xorg.conf.d/
+!.config/coc/
 !.gitconfig
 !.gitmessage
 !.inputrc

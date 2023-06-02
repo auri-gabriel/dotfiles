@@ -50,9 +50,14 @@ snippet func "Function/Method Comments (PHPDoc style)" b
 	 * @param ${5:[Parameter Type]} ${6:param2} ${7:[Description of the parameter]}
 	 * @return ${8:[Return Type]} ${9:[Description of the return value]}
 	 * @throws ${10:[Exception Type]} ${11:[Description of the exception]}
-	 * @deprecated ${12:Version} ${13:Deprecation reason}
-	 * @see ${14:Related Class/Method}
-	 * @since ${15:Version}
+	 * @deprecated ${13:Version} ${14:Deprecation reason}
+	 * @see ${15:Related Class/Method}
+	 * @since ${16:Version}
+	 * @example
+	 * ```
+	 * // Example usage
+	 * ${12:exampleFunction}(${13:arg1}, ${14:arg2});
+	 * ```
 	 */
 endsnippet
 
@@ -73,7 +78,6 @@ snippet classc "Class Comments (PHPDoc style)" b
 	 * @deprecated ${11:Version} ${12:Deprecation reason}
 	 */
 endsnippet
-
 snippet sectionc "Section Comments" b
 	// === ${1:Section Name} ===
 	// ${2:Description of the section}
