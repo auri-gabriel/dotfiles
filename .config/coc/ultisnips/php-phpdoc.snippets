@@ -1,0 +1,55 @@
+snippet "phpdoc-class" "PHPDoc Class"
+/**
+ * Class ${1:ClassName}
+ *
+ * ${2:Class description}
+ *
+ * @package ${3:Namespace}
+ * @author ${4:Your Name}
+ * @version ${5:1.0}
+ * @since ${6:Date}
+ */
+class ${1:ClassName}
+{
+    ${7}
+}
+
+snippet "phpdoc-method" "PHPDoc Method"
+/**
+ * ${1:Method description}
+ *
+ * @param ${2:Type} $${3:parameterName} ${4:Parameter description}
+ * 
+ * @return ${5:Type} ${6:Return description}
+ * @throws ${7:Exception}
+ * 
+ * @since ${8:Date}
+ * @deprecated ${9:Deprecated since version}
+ * @see ${10:Related Class or Method}
+ */
+public function ${3:methodName}(${2:Type} $${3:parameterName}): ${5:Type}
+{
+    ${11}
+}
+
+snippet "phpdoc-property" "PHPDoc Property"
+/**
+ * ${1:Property description}
+ *
+ * @var ${2:Type}
+ * 
+ * @since ${3:Date}
+ * @access ${4:private}
+ */
+public ${2:Type} $${5:propertyName};
+
+snippet "phpdoc-constant" "PHPDoc Constant"
+/**
+ * ${1:Constant description}
+ *
+ * @var ${2:Type}
+ * 
+ * @since ${3:Date}
+ */
+const ${4:CONSTANT_NAME} = ${5:Value};
+
