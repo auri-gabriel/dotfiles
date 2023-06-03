@@ -188,7 +188,7 @@ bindsym $mod+r mode "resize"
 font pango:FiraCode Nerd Font 11
 
 # wallpaper
-exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpapers/finalizer.png 
+exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpapers/girl-reading-book.png
 
 # set primary gruvbox colorscheme colors
 set $bg #282828
