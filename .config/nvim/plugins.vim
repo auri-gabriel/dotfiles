@@ -74,9 +74,6 @@ Plug 'pangloss/vim-javascript'
 " React
 Plug 'MaxMEllon/vim-jsx-pretty'
 
-" auto pairs
-Plug 'LunarWatcher/auto-pairs'
-
 " blade template support
 Plug 'jwalton512/vim-blade'
 
