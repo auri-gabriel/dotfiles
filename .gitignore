@@ -13,6 +13,7 @@
 !.config/zathura/
 !.config/xorg.conf.d/
 !.config/coc/
+!.config/rofi/
 !.gitconfig
 !.gitmessage
 !.inputrc
