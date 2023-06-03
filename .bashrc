@@ -27,20 +27,13 @@ fi
 unset rc
 . "$HOME/.cargo/env"
 
-# Set neovim as default editor
-export VISUAL=nvim
-export EDITOR="$VISUAL"
-# Set neovim as manpager
-export MANPAGER='nvim +Man!'
-
 # Set the keybindings to vi mode.
 set -o vi
-
-# Init Startship.rs
-eval "$(starship init bash)"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Init Startship.rs
+eval "$(starship init bash)"
