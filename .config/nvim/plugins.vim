@@ -62,6 +62,9 @@ Plug 'tpope/vim-commentary'
 " nvim-colorizer
 Plug 'norcalli/nvim-colorizer.lua'
 
+" sidebar git integrations
+Plug 'airblade/vim-gitgutter'
+
 "Outputs directly in the editor
 Plug 'metakirby5/codi.vim'
 
@@ -76,5 +79,6 @@ Plug 'LunarWatcher/auto-pairs'
 
 " blade template support
 Plug 'jwalton512/vim-blade'
+
 
 call plug#end()
