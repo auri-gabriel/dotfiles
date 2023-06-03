@@ -26,7 +26,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 
 " colour theme
-Plug 'folke/tokyonight.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
 
 " Emmet for vim
@@ -72,6 +71,10 @@ Plug 'pangloss/vim-javascript'
 " React
 Plug 'MaxMEllon/vim-jsx-pretty'
 
+" auto pairs
 Plug 'LunarWatcher/auto-pairs'
+
+" blade template support
+Plug 'jwalton512/vim-blade'
 
 call plug#end()
