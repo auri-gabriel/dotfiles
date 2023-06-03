@@ -34,6 +34,9 @@ Plug 'mattn/emmet-vim'
 " Surround text selector
 Plug 'tpope/vim-surround'
 
+" vim latex integration
+Plug 'lervag/vimtex'
+
 " follow system colourscheme
 Plug 'vimpostor/vim-lumen'
 

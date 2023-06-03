@@ -35,6 +35,7 @@ npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-pac
 npm install coc-rust-analyzer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm isntall coc-sh --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm isntall coc-yaml --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-vimtex --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 # web dev
 npm install coc-html --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-css --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
@@ -46,4 +47,3 @@ npm install coc-json --global-style --ignore-scripts --no-bin-links --no-package
 # php
 npm install coc-phpls --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-blade --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-
