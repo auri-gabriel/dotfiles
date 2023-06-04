@@ -46,7 +46,7 @@ SyncFilter = cal
 # nothing is actually written to the server or to the local data files. If you
 # combine DryRun = Yes with Verbose = Yes, you get a log of what would have
 # happened with this option disabled.
-DryRun = Yes
+DryRun = No
 
 # Enable this if you want detailed logs written to stdout.
 Verbose = Yes

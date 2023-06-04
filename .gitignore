@@ -15,6 +15,7 @@
 !.config/coc/
 !.config/rofi/
 !.config/calcurse/
+.config/calcurse/caldav/config
 !.gitconfig
 !.gitmessage
 !.inputrc
