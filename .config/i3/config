@@ -157,6 +157,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
+# bind ctrl+alt+rigth/left to switch to next/previous workspace
+bindsym Ctrl+$mod+Right workspace next
+bindsym Ctrl+$mod+Left workspace prev
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
