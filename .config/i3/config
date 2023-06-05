@@ -264,5 +264,9 @@ client.background       $bg
 #    binding_mode         $aqua $purple $white
 #  }
 #}
+
+# Set the keyboard to the us layout with caps as escape
+exec --no-startup-id ~/Scripts/keyboard_setup.sh
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id redshift -c ~/.config/redshift.conf
