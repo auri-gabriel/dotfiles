@@ -16,6 +16,7 @@ source ~/.config/nvim/ale.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/emmet.vim
 source ~/.config/nvim/goyo.vim
+source ~/.config/nvim/copilot.vim
 source ~/.config/nvim/lightline.vim
 "source ~/.config/nvim/tree.vim
 source ~/.config/nvim/vimwiki.vim
