@@ -80,5 +80,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 " blade template support
 Plug 'jwalton512/vim-blade'
 
+" indent lines
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
