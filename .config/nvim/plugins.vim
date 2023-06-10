@@ -40,9 +40,6 @@ Plug 'lervag/vimtex'
 " follow system colourscheme
 Plug 'vimpostor/vim-lumen'
 
-" discord rich presence
-Plug 'andweeb/presence.nvim'
-
 " vimwiki
 Plug 'vimwiki/vimwiki'
 
