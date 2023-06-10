@@ -12,3 +12,6 @@ let g:indentLine_char = '┊'
 " config to work with vimwiki
 let g:indentLine_concealcursor=""
 let g:indentLine_conceallevel=2
+
+" disable indentLine for man pages
+autocmd FileType man IndentLinesDisable
