@@ -80,4 +80,20 @@ Plug 'jwalton512/vim-blade'
 " indent lines
 Plug 'Yggdroot/indentLine'
 
+
+
+" ChatGPT.nvim
+Plug 'jackMort/ChatGPT.nvim'
+
+" start ChatGPT.nvim dependencies
+" nui.nvim
+Plug 'MunifTanjim/nui.nvim'
+
+" plenary.nvim
+Plug 'nvim-lua/plenary.nvim'
+
+" telescope.nvim
+Plug 'nvim-telescope/telescope.nvim'
+" end ChatGPT.nvim dependencies
+
 call plug#end()
