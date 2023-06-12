@@ -15,3 +15,4 @@ let g:indentLine_conceallevel=2
 
 " disable indentLine for man pages
 autocmd FileType man IndentLinesDisable
+autocmd FileType help IndentLinesDisable
