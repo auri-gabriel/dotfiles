@@ -18,6 +18,7 @@ alacritty
 texlive-scheme-full
 task
 timew
+ledger
 pass
 libinput
 gcc
