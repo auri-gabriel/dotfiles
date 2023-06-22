@@ -3,6 +3,7 @@
     "html.format.templating": true,
     "javascript.format.enable": true,
     "intelephense.format.braces": "allman",
-    "intelephense.format.enable": true
+    "intelephense.format.enable": true,
+    "ltex.language": "pt-BR"
 }
 
