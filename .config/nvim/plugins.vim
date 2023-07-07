@@ -50,6 +50,9 @@ Plug 'junegunn/limelight.vim'
 " vim table mode
 Plug 'dhruvasagar/vim-table-mode'
 
+" tabularize
+Plug 'godlygeek/tabular'
+
 " github copilot
 Plug 'github/copilot.vim'
 
