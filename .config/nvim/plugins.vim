@@ -3,6 +3,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Bottom bar
 Plug 'itchyny/lightline.vim'
 
+" Flutter support
+Plug 'dart-lang/dart-vim-plugin'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'stevearc/dressing.nvim' " optional for vim.ui.select
+" Plug 'akinsho/flutter-tools.nvim'
+
 " Sidebar
 Plug 'dense-analysis/ale' 
 
@@ -100,3 +106,7 @@ Plug 'nvim-telescope/telescope.nvim'
 " end ChatGPT.nvim dependencies
 
 call plug#end()
+
+" lua << EOF
+"   require("flutter-tools").setup {} -- use defaults
+" EOF
