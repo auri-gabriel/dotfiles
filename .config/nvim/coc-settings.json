@@ -4,6 +4,9 @@
     "javascript.format.enable": true,
     "intelephense.format.braces": "allman",
     "intelephense.format.enable": true,
-    "ltex.language": "pt-BR"
+    "ltex.language": "pt-BR",
+    "ltex.enabled": [
+        "latex",
+        "markdown"
+    ]
 }
-
