@@ -269,6 +269,4 @@ client.background       $bg
 exec --no-startup-id ~/Scripts/keyboard_setup.sh
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec waybar
-
 exec --no-startup-id redshift -c ~/.config/redshift.conf
