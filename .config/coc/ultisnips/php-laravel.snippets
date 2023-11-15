@@ -1,5 +1,27 @@
+# Controller
+snippet controller "Laravel Controller" b
+<?php
+
+/*!
+ * \class       $1
+ *
+ * \author      ${3:`!v g:snips_author`}
+ * \date        `!v strftime('%d-%m-%y')`
+ */
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class ${1:ControllerName} extends Controller
+{
+    //
+}
+endsnippet
 # Resource Controller
 snippet l_rsc "Laravel resource controller" b
+<?php
+
 /*!
  * \class       $1
  *
@@ -11,32 +33,61 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
-class ${1:`!v expand('%:t:r')`} extends Controller {
-    public function index() {
+class ${1:`!v expand('%:t:r')`} extends Controller 
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
         //
     }
 
-    public function create() {
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
         //
     }
 
-    public function store() {
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
         //
     }
 
-    public function show($id) {
+    /**
+     * Display the specified resource.
+     */
+    public function show($id)
+    {
         //
     }
 
-    public function edit($id) {
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit($id)
+    {
         //
     }
 
-    public function update($id) {
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, $id)
+    {
         //
     }
 
-    public function destroy($id) {
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy($id)
+    {
         //
     }
 }
@@ -58,9 +109,12 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class ${2:`!v expand('%:t:r')`} extends ServiceProvider {
-    public function register() {
-        $this->app->bind('${4:Service}', function ($app) {
+class ${2:`!v expand('%:t:r')`} extends ServiceProvider
+{
+    public function register() 
+	{
+        $this->app->bind('${4:Service}', function ($app) 
+		{
             return new ${5:Service}(
                 $app->make('App\Repositories\\${6:Interface}')
             );
@@ -87,16 +141,20 @@ use App\Entities\\${1:};
 use App\Repositories\\${2:Repository};
 use Illuminate\Support\ServiceProvider;
 
-class ${3:`!v expand('%:t:r')`} extends ServiceProvider {
+class ${3:`!v expand('%:t:r')`} extends ServiceProvider 
+{
     protected $defer = ${5:true};
 
-    public function register() {
-        $this->app->bind('${2}\\${1}Interface', function ($app) {
+    public function register()
+	{
+        $this->app->bind('${2}\\${1}Interface', function ($app)
+		{
             return new ${2:Repository}(new ${1}());
         });
     }
 
-    public function provides() {
+    public function provides() 
+	{
         return ['${2}\\${1}Interface'];
     }
 }
@@ -118,7 +176,8 @@ namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ${2:`!v expand('%:t:r')`} extends Model {
+class ${2:`!v expand('%:t:r')`} extends Model
+{
     protected $table = '${4:`!p snip.rv = t[2].lower()`}';
     public $timestamps = ${5:false};
     protected $hidden = [${6}];
@@ -144,26 +203,32 @@ namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 
-abstract class ${2:`!v expand('%:t:r')`} implements ${3:BaseRepositoryInterface} {
+abstract class ${2:`!v expand('%:t:r')`} implements ${3:BaseRepositoryInterface}
+{
     protected $model;
 
-    public function __construct(Model $model) {
+    public function __construct(Model $model) 
+	{
         $this->model = $model;
     }
 
-    public function all($columns = ['*']) {
+    public function all($columns = ['*']) 
+	{
         return $this->model->all($columns)->toArray();
     }
 
-    public function create(array $attributes) {
+    public function create(array $attributes) 
+	{
         return $this->model->create($attributes);
     }
 
-    public function destroy($ids) {
+    public function destroy($ids) 
+	{
         return $this->model->destroy($ids);
     }
 
-    public function find($id, $columns = ['*']) {
+    public function find($id, $columns = ['*']) 
+	{
         return $this->model->find($id, $columns);
     }
 }
@@ -184,7 +249,8 @@ snippet l_r "Laravel Repository" b
 
 namespace App\Repositories\\${2:};
 
-class ${3:`!v expand('%:t:r')`} extends \\${6} implements ${4:${3:}RepositoryInterface} {
+class ${3:`!v expand('%:t:r')`} extends \\${6} implements ${4:${3:}RepositoryInterface} 
+{
     ${7}
 }
 endsnippet
@@ -205,10 +271,12 @@ namespace App\Services\\${1:};
 
 use App\Repositories\\${3:Interface};
 
-class ${2:`!v expand('%:t:r')`} {
+class ${2:`!v expand('%:t:r')`} 
+{
     protected $${5:repo};
 
-    public function __construct(${3:Interface} $repo) {
+    public function __construct(${3:Interface} $repo) 
+	{
         $this->$5 = $repo;
     }
 }
@@ -230,8 +298,10 @@ namespace App\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class ${2:`!v expand('%:t:r')`} extends Facade {
-    protected static function getFacadeAccessor() {
+class ${2:`!v expand('%:t:r')`} extends Facade 
+{
+    protected static function getFacadeAccessor() 
+	{
         return '${4:${3:}Service}';
     }
 }
@@ -239,17 +309,56 @@ endsnippet
 
 # Controller Method with Request
 snippet l_cmr "Laravel Controller Method with Request" b
-    public function ${1:methodName}(${2:Request} $request) {
+    public function ${1:methodName}(${2:Request} $request) 
+	{
         ${3:// Your code here}
     }
 endsnippet
 
 # Route Group
 snippet l_rg "Laravel Route Group" b
-Route::group(['middleware' => '${1:middleware}', 'prefix' => '${2:prefix}'], function () {
+Route::group(['middleware' => '${1:middleware}', 'prefix' => '${2:prefix}'], function () 
+{
     ${3:// Your routes here}
 });
 endsnippet
+
+# Resourceful Routes
+snippet l_rr "Laravel Resourceful Routes" b
+Route::resource('${1:resource}', ${2:ResourceController}::class);
+endsnippet
+
+# Named Route
+snippet l_nr "Laravel Named Route" b
+Route::${1:get}('${2:uri}', '${3:name}')->${4:name}('${5:action}');
+endsnippet
+
+# Route with Middleware
+snippet l_rm "Laravel Route with Middleware" b
+Route::${1:get}('${2:uri}', '${3:Controller}@${4:method}')->middleware('${5:middleware}');
+endsnippet
+
+# Route Group with Middleware
+snippet l_rgm "Laravel Route Group with Middleware" b
+Route::group(['middleware' => ['${1:middleware}']], function () 
+{
+    // Your routes here
+});
+endsnippet
+
+# Named Route Group
+snippet l_nrg "Laravel Named Route Group" b
+Route::group(['as' => '${1:group_name}'], function () 
+{
+    // Your routes here
+});
+endsnippet
+
+# View Route
+snippet l_vr "Laravel View Route" b
+Route::view('${1:uri}', '${2:view_name}')->name('${3:route_name}');
+endsnippet
+
 
 # Middleware
 snippet l_mdw "Laravel Middleware" b
@@ -267,8 +376,10 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class ${1:`!v expand('%:t:r')`} {
-    public function handle($request, Closure $next) {
+class ${1:`!v expand('%:t:r')`} 
+{
+    public function handle($request, Closure $next) 
+	{
         // Your middleware logic here
         return $next($request);
     }
@@ -277,7 +388,8 @@ endsnippet
 
 # Eloquent Relationship
 snippet l_er "Laravel Eloquent Relationship" b
-public function ${1:relatedModel}() {
+public function ${1:relatedModel}() 
+{
     return $this->${2:belongsTo}(${3:RelatedModel}::class);
 }
 endsnippet
@@ -298,8 +410,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class ${1:`!v expand('%:t:r')`} extends Seeder {
-    public function run() {
+class ${1:`!v expand('%:t:r')`} extends Seeder 
+{
+    public function run() 
+	{
         // Your seeder logic here
     }
 }
@@ -323,10 +437,12 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class ${1:`!v expand('%:t:r')`} extends TestCase {
+class ${1:`!v expand('%:t:r')`} extends TestCase 
+{
     use RefreshDatabase, WithFaker;
 
-    public function test_${3:example}() {
+    public function test_${3:example}() 
+	{
         // Your test logic here
         $this->assertTrue(true);
     }
