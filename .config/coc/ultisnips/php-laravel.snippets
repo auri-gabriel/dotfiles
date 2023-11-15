@@ -1,4 +1,4 @@
-#resource controller
+# Resource Controller
 snippet l_rsc "Laravel resource controller" b
 /*!
  * \class       $1
@@ -7,264 +7,329 @@ snippet l_rsc "Laravel resource controller" b
  * \date        `!v strftime('%d-%m-%y')`
  */
 
-class ${1:`!v expand('%:t:r')`} extends ${2:BaseController} {
-    function __construct() {
-    }
-    
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+
+class ${1:`!v expand('%:t:r')`} extends Controller {
     public function index() {
+        //
     }
-    
+
     public function create() {
+        //
     }
-    
+
     public function store() {
+        //
     }
-    
+
     public function show($id) {
+        //
     }
-    
+
     public function edit($id) {
+        //
     }
-    
+
     public function update($id) {
+        //
     }
-    
+
     public function destroy($id) {
+        //
     }
 }
 endsnippet
 
-#service service provider
+# Service Provider for Service
 snippet l_ssp "Laravel service provider for service" b
 <?php
 
 /*!
- * \namespace   $1
- * \class       $2
+ * \namespace   App\Services
+ * \class       ${2:`!v expand('%:t:r')`}
  *
  * \author      ${3:`!v g:snips_author`}
  * \date        `!v strftime('%d-%m-%y')`
  */
 
-namespace ${1:Services};
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
 class ${2:`!v expand('%:t:r')`} extends ServiceProvider {
-    
     public function register() {
-        $this->app->bind('$4Service', function ($app) {
-            return new $5(
-                $app->make('Repositories\\$6Interface')
+        $this->app->bind('${4:Service}', function ($app) {
+            return new ${5:Service}(
+                $app->make('App\Repositories\\${6:Interface}')
             );
         });
     }
 }
 endsnippet
 
-#repository service provider
+# Service Provider for Repository
 snippet l_rsp "Laravel service provider for repository" b
 <?php
 
 /*!
- * \namespace   $2
- * \class       $3
+ * \namespace   App\Repositories\\${1:}
+ * \class       ${3:`!v expand('%:t:r')`}
  *
  * \author      ${4:`!v g:snips_author`}
  * \date        `!v strftime('%d-%m-%y')`
  */
 
-namespace ${2:Repositories\\${1:}};
+namespace App\Providers;
 
-use Entities\\$1;
-use $2\\$1Repository;
+use App\Entities\\${1:};
+use App\Repositories\\${2:Repository};
 use Illuminate\Support\ServiceProvider;
 
 class ${3:`!v expand('%:t:r')`} extends ServiceProvider {
-    /*!
-     * \var     defer
-     * \brief   Defer service
-     */
     protected $defer = ${5:true};
 
     public function register() {
-        $this->app->bind('$2\\$1Interface', function($app) {
-            return new $1Repository(new $1());
+        $this->app->bind('${2}\\${1}Interface', function ($app) {
+            return new ${2:Repository}(new ${1}());
         });
     }
 
-    /*!
-     * \brief   If $defer == true need this fn
-     */ 
     public function provides() {
-        return ['$2\\$1Interface'];
+        return ['${2}\\${1}Interface'];
     }
 }
 endsnippet
 
-#model
+# Model
 snippet l_md "Laravel simple model" b
 <?php
 
 /*!
- * \namespace   $1
- * \class       $2
+ * \namespace   App\Entities
+ * \class       ${2:`!v expand('%:t:r')`}
  *
  * \author      ${3:`!v g:snips_author`}
  * \date        `!v strftime('%d-%m-%y')`
  */
 
-namespace ${1:Entities};
+namespace App\Entities;
 
-class ${2:`!v expand('%:t:r')`} extends \Eloquent {
-    protected $table   = '${4:`!p snip.rv = t[2].lower()`}';
+use Illuminate\Database\Eloquent\Model;
 
+class ${2:`!v expand('%:t:r')`} extends Model {
+    protected $table = '${4:`!p snip.rv = t[2].lower()`}';
     public $timestamps = ${5:false};
-
-    protected $hidden  = [$6];
+    protected $hidden = [${6}];
 
     protected $guarded = [${7:'id'}];
 }
 endsnippet
 
-#abstract repository
+# Abstract Repository
 snippet l_ar "Laravel abstract Repository" b
 <?php
 
 /*!
- * \namespace   $1
- * \class       $2
- * \implements  $3
+ * \namespace   App\Repositories
+ * \class       ${2:`!v expand('%:t:r')`}
+ * \implements  ${3:BaseRepositoryInterface}
  *
  * \author      ${4:`!v g:snips_author`}
  * \date        `!v strftime('%d-%m-%y')`
  */
 
-namespace ${1:Repositories};
+namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 
 abstract class ${2:`!v expand('%:t:r')`} implements ${3:BaseRepositoryInterface} {
     protected $model;
 
-    /*!
-     * \fn      __construct
-     *
-     * \brief   Take the model
-     */
-
     public function __construct(Model $model) {
         $this->model = $model;
     }
 
-    /*!
-     * \fn      all
-     *
-     * \return  Illuminate\Database\Eloquent\Collection
-     */
     public function all($columns = ['*']) {
-        return $this->model->all()->toArray();
+        return $this->model->all($columns)->toArray();
     }
 
-    /*!
-     * \fn      create
-     *
-     * \return  Illuminate\Database\Eloquent\Model
-     */
     public function create(array $attributes) {
         return $this->model->create($attributes);
     }
 
-    /*!
-     * \fn      destroy
-     *
-     * \return  int
-     */
     public function destroy($ids) {
         return $this->model->destroy($ids);
     }
 
-    /*!
-     * \fn      find
-     *
-     * \return  mixed
-     */
     public function find($id, $columns = ['*']) {
         return $this->model->find($id, $columns);
     }
 }
 endsnippet
 
-#repository
+# Repository
 snippet l_r "Laravel Repository" b
 <?php
 
 /*!
- * \namespace   $1
- * \class       $3
- * \implements  $4
+ * \namespace   App\Repositories\\${2:}
+ * \class       ${3:`!v expand('%:t:r')`}
+ * \implements  ${4:${3:}RepositoryInterface}
  *
  * \author      ${5:`!v g:snips_author`}
  * \date        `!v strftime('%d-%m-%y')`
  */
 
-namespace ${1:Repositories\\$2};
+namespace App\Repositories\\${2:};
 
-class ${3:`!v expand('%:t:r')`} extends \\$6 implements ${4:$3RepositoryInterface} {
-    $7
+class ${3:`!v expand('%:t:r')`} extends \\${6} implements ${4:${3:}RepositoryInterface} {
+    ${7}
 }
 endsnippet
 
-#service
+# Service
 snippet l_s "Laravel Service" b
 <?php
 
 /*!
- * \namespace   $1
- * \class       $2
+ * \namespace   App\Services\\${1:}
+ * \class       ${2:`!v expand('%:t:r')`}
  *
  * \author      ${6:`!v g:snips_author`}
  * \date        `!v strftime('%d-%m-%y')`
  */
 
-namespace Services\\$1;
+namespace App\Services\\${1:};
 
-use ${3:Repositories\\${4:Interface}};
+use App\Repositories\\${3:Interface};
 
 class ${2:`!v expand('%:t:r')`} {
     protected $${5:repo};
-    
-    /*!
-     * \fn      __construct
-     */
-    public function __construct($4 $repo) {
+
+    public function __construct(${3:Interface} $repo) {
         $this->$5 = $repo;
     }
 }
 endsnippet
 
-#facade
+# Facade
 snippet l_f "Laravel Facade" b
 <?php
 
 /*!
- * \namespace   $1
- * \class       $2
+ * \namespace   App\Facades
+ * \class       ${2:`!v expand('%:t:r')`}
  *
  * \author      ${5:`!v g:snips_author`}
  * \date        `!v strftime('%d-%m-%y')`
  */
 
-namespace ${1:Services};
+namespace App\Facades;
 
-use \Illuminate\Support\Facades\Facade;
+use Illuminate\Support\Facades\Facade;
 
 class ${2:`!v expand('%:t:r')`} extends Facade {
-    /*!
-     * \fn          getFacadeAccessor
-     *
-     * \return      string
-     */
-    protected static function getFacadeAccessor() { return '${4:$3Service}'; }
+    protected static function getFacadeAccessor() {
+        return '${4:${3:}Service}';
+    }
 }
 endsnippet
+
+# Controller Method with Request
+snippet l_cmr "Laravel Controller Method with Request" b
+    public function ${1:methodName}(${2:Request} $request) {
+        ${3:// Your code here}
+    }
+endsnippet
+
+# Route Group
+snippet l_rg "Laravel Route Group" b
+Route::group(['middleware' => '${1:middleware}', 'prefix' => '${2:prefix}'], function () {
+    ${3:// Your routes here}
+});
+endsnippet
+
+# Middleware
+snippet l_mdw "Laravel Middleware" b
+<?php
+
+/*!
+ * \namespace   App\Http\Middleware
+ * \class       ${1:`!v expand('%:t:r')`}
+ *
+ * \author      ${2:`!v g:snips_author`}
+ * \date        `!v strftime('%d-%m-%y')`
+ */
+
+namespace App\Http\Middleware;
+
+use Closure;
+
+class ${1:`!v expand('%:t:r')`} {
+    public function handle($request, Closure $next) {
+        // Your middleware logic here
+        return $next($request);
+    }
+}
+endsnippet
+
+# Eloquent Relationship
+snippet l_er "Laravel Eloquent Relationship" b
+public function ${1:relatedModel}() {
+    return $this->${2:belongsTo}(${3:RelatedModel}::class);
+}
+endsnippet
+
+# Seeder
+snippet l_sdr "Laravel Seeder" b
+<?php
+
+/*!
+ * \namespace   Database\Seeders
+ * \class       ${1:`!v expand('%:t:r')`}
+ *
+ * \author      ${2:`!v g:snips_author`}
+ * \date        `!v strftime('%d-%m-%y')`
+ */
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class ${1:`!v expand('%:t:r')`} extends Seeder {
+    public function run() {
+        // Your seeder logic here
+    }
+}
+endsnippet
+
+# Test Case
+snippet l_tc "Laravel Test Case" b
+<?php
+
+/*!
+ * \namespace   Tests\Feature
+ * \class       ${1:`!v expand('%:t:r')`}
+ *
+ * \author      ${2:`!v g:snips_author`}
+ * \date        `!v strftime('%d-%m-%y')`
+ */
+
+namespace Tests\Feature;
+
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
+
+class ${1:`!v expand('%:t:r')`} extends TestCase {
+    use RefreshDatabase, WithFaker;
+
+    public function test_${3:example}() {
+        // Your test logic here
+        $this->assertTrue(true);
+    }
+}
+endsnippet
+
