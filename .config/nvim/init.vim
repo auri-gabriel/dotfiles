@@ -22,4 +22,3 @@ source ~/.config/nvim/lightline.vim
 source ~/.config/nvim/indentline.vim
 source ~/.config/nvim/vimwiki.vim
 source ~/.config/nvim/undotree.vim
-source ~/.config/nvim/chatgpt.vim
