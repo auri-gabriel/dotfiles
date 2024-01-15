@@ -1,0 +1,44 @@
+live_config_reload = true
+
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+]
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 4
+
+[shell]
+args = ["-l", "-c", "tmux attach || tmux"]
+program = "/usr/bin/bash"
+
+[window]
+decorations = "full"
+decorations_theme_variant = "Dark"
+dynamic_padding = false
+
+[window.padding]
+x = 4
+y = 4
