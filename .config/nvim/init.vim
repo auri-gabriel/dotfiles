@@ -10,6 +10,7 @@ source ~/.config/nvim/colorschemes.vim
 source ~/.config/nvim/appearance.vim
 source ~/.config/nvim/spell.vim
 source ~/.config/nvim/functions.vim
+source ~/.config/nvim/settings.vim
 
 " plugins configs
 source ~/.config/nvim/ale.vim
