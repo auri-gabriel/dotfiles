@@ -4,13 +4,13 @@ set -o nounset    # error when referencing undefined variable
 set -o errexit    # exit when command fails
 
 
-# Install latest nodejs
-if [ ! -x "$(command -v node)" ]; then
-    curl --fail -LSs https://install-node.now.sh/latest | sh
-    export PATH="/usr/local/bin/:$PATH"
-    # Or use package manager, e.g.
-    # sudo apt-get install nodejs
-fi
+# # Install latest nodejs
+# if [ ! -x "$(command -v node)" ]; then
+#     curl --fail -LSs https://install-node.now.sh/latest | sh
+#     export PATH="/usr/local/bin/:$PATH"
+#     # Or use package manager, e.g.
+#     # sudo apt-get install nodejs
+# fi
 
 # Use package feature to install coc.nvim
 
@@ -48,3 +48,5 @@ npm install coc-json --global-style --ignore-scripts --no-bin-links --no-package
 # php
 npm install coc-phpls --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-blade --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+#python
+npm install coc-pyright --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
