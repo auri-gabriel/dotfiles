@@ -11,3 +11,22 @@ function! CreateFile(filename)
         echo 'File "' . a:filename . '" created successfully.'
     endif
 endfunction
+
+" Open current file directory in a new tab
+command! OpenFileDirectoryInTab :call OpenCurrentFileDirectoryInTab()
+
+function OpenCurrentFileDirectoryInTab()
+    let current_file = expand('%:p')
+    let current_directory = fnamemodify(current_file, ':h')
+    execute 'tabe' current_directory
+endfunction
+
+" Open current file directory in a new split
+command! OpenFileDirectoryInSplit :call OpenCurrentFileDirectoryInSplit()
+
+function OpenCurrentFileDirectoryInSplit()
+    let current_file = expand('%:p')
+    let current_directory = fnamemodify(current_file, ':h')
+    execute 'sp' current_directory
+endfunction
+

@@ -89,6 +89,9 @@ Plug 'jwalton512/vim-blade'
 " indent lines
 Plug 'Yggdroot/indentLine'
 
+" wakatime
+Plug 'wakatime/vim-wakatime'
+
 call plug#end()
 
 " lua << EOF
