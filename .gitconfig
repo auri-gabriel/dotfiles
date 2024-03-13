@@ -1,5 +1,7 @@
 [core]
 	editor = nvim
+    autocrlf = input
+    whitespace = trailing-space,space-before-tab,indent-with-non-tab
 [user]
 	email = ririmello.a@gmail.com
 	name = Auri Gabriel
@@ -7,4 +9,6 @@
 	defaultBranch = main
 [commit]
   template = ~/.gitmessage
+[push]
+  default = simple
 [credential]
