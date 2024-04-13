@@ -16,3 +16,4 @@ ledger
 pass
 libinput
 gcc
+inotify-tools
