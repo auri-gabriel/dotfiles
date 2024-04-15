@@ -92,6 +92,9 @@ Plug 'Yggdroot/indentLine'
 " wakatime
 Plug 'wakatime/vim-wakatime'
 
+" fountain.vim
+Plug 'kblin/vim-fountain'
+
 call plug#end()
 
 " lua << EOF
