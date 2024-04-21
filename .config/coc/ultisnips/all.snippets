@@ -1,5 +1,9 @@
-snippet today "Date"
+snippet today "Today's Date"
 `date +%F`
+endsnippet
+
+snippet now "Current Date and Time"
+`date +"%Y-%m-%dT%H:%M:%S%z"`
 endsnippet
 
 snippet box "Box"
@@ -7,4 +11,8 @@ snippet box "Box"
 │ $1 │
 `!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
 $0
+endsnippet
+
+snippet location "My current location" b
+`ip addr show | grep 'inet addr' | grep -v '127.0.0.1' | awk '{print $2}' | head -n 1  | xargs curl -s ipinfo.io/ | jq -r '.city + ", " + .region + ", " + .country'`
 endsnippet
