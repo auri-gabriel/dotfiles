@@ -59,9 +59,6 @@ Plug 'dhruvasagar/vim-table-mode'
 " tabularize
 Plug 'godlygeek/tabular'
 
-" github copilot
-Plug 'github/copilot.vim'
-
 " undo tree
 Plug 'mbbill/undotree'
 
