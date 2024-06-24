@@ -16,3 +16,24 @@ endsnippet
 snippet location "My current location" b
 `ip addr show | grep 'inet addr' | grep -v '127.0.0.1' | awk '{print $2}' | head -n 1  | xargs curl -s ipinfo.io/ | jq -r '.city + ", " + .region + ", " + .country'`
 endsnippet
+
+snippet pbeamer "Pandoc Beamer Metadata"
+---
+output: 
+- beamer_presentation
+title:
+- "$1"
+author:
+- Auri Gabriel Castro de Melo 
+date:
+- `date -I`
+institute:
+- Universidade Federal do Pampa
+theme:
+- Berlin
+colortheme:
+- whale
+bibliography: bibliography.bib
+---
+$0
+endsnippet
