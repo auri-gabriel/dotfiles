@@ -92,6 +92,10 @@ Plug 'wakatime/vim-wakatime'
 " fountain.vim
 Plug 'kblin/vim-fountain'
 
+" github copilot
+"
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 " lua << EOF
