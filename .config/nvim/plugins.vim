@@ -98,6 +98,7 @@ Plug 'github/copilot.vim'
 
 call plug#end()
 
+autocmd FileType scss setl iskeyword+=@-@
 " lua << EOF
 "   require("flutter-tools").setup {} -- use defaults
 " EOF
