@@ -88,15 +88,11 @@ Plug 'jwalton512/vim-blade'
 " indent lines
 Plug 'Yggdroot/indentLine'
 
-" wakatime
-Plug 'wakatime/vim-wakatime'
-
 " fountain.vim
 Plug 'kblin/vim-fountain'
 
-" github copilot
-"
-Plug 'github/copilot.vim'
+"pug
+Plug 'digitaltoad/vim-pug'
 
 call plug#end()
 
