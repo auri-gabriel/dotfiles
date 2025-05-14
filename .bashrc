@@ -38,3 +38,5 @@ export NVM_DIR="$HOME/.nvm"
 # Init Startship.rs
 eval "$(starship init bash)"
 export GOPATH=$HOME/go
+
+alias zola="flatpak run org.getzola.zola"
