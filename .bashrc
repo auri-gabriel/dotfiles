@@ -40,3 +40,4 @@ eval "$(starship init bash)"
 export GOPATH=$HOME/go
 
 alias zola="flatpak run org.getzola.zola"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
