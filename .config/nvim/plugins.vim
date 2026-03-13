@@ -94,6 +94,9 @@ Plug 'kblin/vim-fountain'
 "pug
 Plug 'digitaltoad/vim-pug'
 
+"twig
+Plug 'nelsyeung/twig.vim'
+
 call plug#end()
 
 autocmd FileType scss setl iskeyword+=@-@
