@@ -1,0 +1,111 @@
+# Essay structure
+snippet essay "Essay structure" b
+# ${1:Title}
+
+Date: `date +%Y-%m-%d`
+
+## Problem
+
+$2
+
+## Context
+
+$3
+
+## Argument
+
+$4
+
+## Conclusion
+
+$0
+endsnippet
+
+
+# Opinion article structure
+snippet op "Opinion article"
+# ${1:Title}
+
+## Claim
+
+$2
+
+## Evidence
+
+$3
+
+## Counterargument
+
+$4
+
+## Conclusion
+
+$0
+endsnippet
+
+
+# Technical note
+snippet tech "Technical note" b
+# ${1:Topic}
+
+## What it is
+
+$2
+
+## How it works
+
+$3
+
+## Example
+
+```$4
+$5
+```
+
+## Notes
+
+$0
+endsnippet
+
+
+# Quick idea note
+snippet idea "Idea note"
+## Idea: ${1:title}
+
+$2
+
+- Why interesting:
+- Problems:
+- Related ideas:
+
+$0
+endsnippet
+
+
+# Quote block
+snippet quote "Quote"
+> ${1:Quote}
+
+— ${2:Author}
+$0
+endsnippet
+
+
+# Daily writing entry
+snippet daily "Daily writing"
+# ${1:Title}
+
+Date: `date +%Y-%m-%d`
+
+## Thought
+
+$2
+
+## Details
+
+$3
+
+## Takeaway
+
+$0
+endsnippet
