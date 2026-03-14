@@ -63,3 +63,5 @@ augroup vimwiki_custom
 
 augroup END
 
+let g:vimwiki_global_ext = 0
+
