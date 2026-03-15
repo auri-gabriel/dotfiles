@@ -97,6 +97,8 @@ Plug 'digitaltoad/vim-pug'
 "twig
 Plug 'nelsyeung/twig.vim'
 
+Plug 'mfussenegger/nvim-dap'
+
 call plug#end()
 
 autocmd FileType scss setl iskeyword+=@-@
