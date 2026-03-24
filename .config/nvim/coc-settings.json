@@ -6,7 +6,6 @@
     "intelephense.format.enable": true,
     "ltex.language": "pt-BR",
     "ltex.enabled": [
-        "latex",
-        "markdown"
+        "latex"
     ]
 }
